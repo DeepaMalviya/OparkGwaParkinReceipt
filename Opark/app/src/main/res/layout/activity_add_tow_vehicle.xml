@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Activity.TowningFormScreen">
+
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/oparklogonew"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Tow Vehicle"
+                    android:textColor="@color/text_color_light_black" />
+
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Released Vehicle"
+                    android:textColor="@color/text_color_light_black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvAvailableSpots"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/text_color_light_black" />
+
+                <TextView
+                    android:id="@+id/tvTotalSpots"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/text_color_light_black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text="Vehicle Type :     "
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/twowheeler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d_5dp"
+                        android:text="Two Wheeler"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <RadioButton
+                        android:id="@+id/threeWheleer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="threeWheleer"
+                        android:textColor="@color/cardview_dark_background" />
+
+                    <RadioButton
+                        android:id="@+id/fourwheeler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Four Wheeler"
+                        android:textColor="@color/cardview_dark_background" />
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Enter Vehcile No."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Vehicle No"
+                    android:textColorHint="@color/cardview_dark_background">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:backgroundTint="@color/cardview_dark_background"
+                        android:digits="QWERTZUIOPASDFGHJKLYXCVBNM0123456789"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textColorHint="@color/cardview_dark_background"
+                        android:textCursorDrawable="@drawable/cursor"
+                        android:textSize="18dp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/storelocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@color/cardview_dark_background" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/vm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Select Vehicle Image"
+                    android:textColor="@color/text_color_light_black"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_toRightOf="@+id/vm"
+                    android:src="@drawable/camea" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/car_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_below="@+id/vm"
+                    android:src="@mipmap/police_car512" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/buttongradient"
+                android:text="Add"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+                android:theme="@style/CheckBoxTheme" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

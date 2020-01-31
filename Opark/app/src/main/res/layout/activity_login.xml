@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/llMainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/color_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btnLogin"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/d_5dp"
+                        android:layout_marginTop="@dimen/d_30dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="@dimen/d_130dp"
+                            android:layout_height="@dimen/d_120dp"
+                            android:src="@drawable/parked_icon"
+                            tools:ignore="ContentDescription" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/d_5dp"
+                            android:text="@string/parkoye1"
+                            android:textColor="@color/text_color_light_black"
+                            android:textSize="@dimen/_16sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_login_email_login_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/d_5dp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/activity_vertical_margin">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/d_5dp"
+                            android:text="login"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/s_24sp" />
+
+
+                        <TextView
+                            android:id="@+id/tribeTextViewBold"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/d_5dp"
+                            android:text="@string/with_your_username_and_password"
+                            android:textColor="@color/text_color_light_black" />
+
+
+                        <!--android:text="mark@tribesocialfitness.com.au"-->
+                        <!--android:text="carla"-->
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/d_10dp"
+                            android:layout_marginRight="@dimen/d_10dp"
+                            android:layout_marginTop="@dimen/d_10dp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/d_2dp">
+
+
+                            <EditText
+                                android:id="@+id/etUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/d_50dp"
+                                android:background="@android:color/white"
+                                android:gravity="center"
+                                android:hint="Enter Mobile Number"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:padding="@dimen/d_5dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_16sdp" />
+
+                            <Button
+                                android:id="@+id/sendotp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_below="@+id/etUsername"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/colorPrimary"
+                                android:text="Send OTP"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/d_50dp"
+                                android:layout_marginBottom="@dimen/d_10dp"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:layout_marginRight="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/d_10dp"
+                                android:background="@android:color/white"
+                                android:gravity="center"
+                                android:hint="Password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:padding="@dimen/d_5dp"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_16sdp" />
+
+                            <TextView
+                                android:id="@+id/etTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/etPassword"
+                                android:layout_marginLeft="@dimen/_9sdp"
+                                android:hint=" "
+                                android:textColor="@color/colorPrimary" />
+
+                            <Button
+                                android:id="@+id/reSendotp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_below="@+id/etPassword"
+                                android:layout_marginRight="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/colorPrimary"
+                                android:text="Resend OTP"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_40dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/d_65dp"
+                android:layout_height="@dimen/d_65dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/background_circle"
+                android:src="@mipmap/ic_success"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/parkOyeTextView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/d_5dp"
+            android:text="@string/with_your_username_and_password"
+            android:textColor="@color/light_grey" />
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

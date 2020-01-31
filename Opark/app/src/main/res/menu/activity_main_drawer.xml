@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_gate"
+        android:checked="false"
+        android:visible="false"
+        android:icon="@drawable/ic_accesss"
+        android:title="Select Gate" />
+<!--    <item
+        android:id="@+id/nav_reprint"
+        android:checked="false"
+        android:icon="@drawable/ic_receipt_black_24dp"
+        android:title="Print Checkout Receipt" />-->
+    <item
+        android:id="@+id/nav_twowheeler"
+        android:checked="false"
+        android:icon="@mipmap/twobike"
+        android:title="Two Wheeler" />
+    <item
+        android:id="@+id/nav_threewheeler"
+        android:checked="false"
+        android:icon="@drawable/tuk_tuk"
+        android:title="Three Wheeler" />
+    <item
+        android:id="@+id/nav_fourwheeler"
+        android:checked="false"
+        android:icon="@mipmap/police_car512"
+        android:title="Four Wheeler" />
+    <item
+        android:id="@+id/nav_PatientVehicle"
+        android:checked="false"
+        android:visible="false"
+        android:icon="@mipmap/police_car512"
+        android:title="Other" />
+
+    <item
+        android:id="@+id/nav_LossReceipt"
+        android:checked="false"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Lost Receipt" />
+    <item
+        android:id="@+id/nav_sub"
+        android:checked="false"
+        android:icon="@drawable/card_add"
+        android:title="Add Card" />
+
+    <item
+        android:id="@+id/nav_renew"
+        android:checked="false"
+        android:icon="@drawable/ic_credit_card_with_pencil"
+        android:title="Renew Card" />
+
+    <item
+        android:id="@+id/nav_detail"
+        android:checked="false"
+        android:icon="@drawable/ic_credit_card"
+        android:title="Card Detail" />
+    <item
+        android:id="@+id/nav_remove"
+        android:checked="false"
+        android:icon="@drawable/ic_credit_card_with_delete_button"
+        android:title="Remove Card" />
+    <item
+        android:id="@+id/nav_carInActivityTwo"
+        android:checked="false"
+        android:icon="@drawable/bike_list"
+        android:title="TwoWheeler List" />
+    <item
+        android:id="@+id/nav_carInActivityThree"
+        android:checked="false"
+        android:icon="@drawable/tuk_tuk"
+        android:title="ThreeWheeler List" />
+    <item
+        android:id="@+id/nav_carOutActivityFour"
+        android:checked="false"
+        android:icon="@drawable/car_list"
+        android:title="FourWheeler List" />
+    <item
+        android:id="@+id/nav_PatientVehicle_List"
+        android:checked="false"
+        android:visible="false"
+        android:icon="@drawable/car_list"
+        android:title="Other Vehicle List" />
+
+    <item
+        android:id="@+id/nav_shiftreport"
+        android:checked="false"
+        android:icon="@drawable/report"
+        android:title="Shift Report" />
+
+    <item
+        android:id="@+id/towvhicle"
+        android:icon="@mipmap/police_car512"
+        android:title="Towing List" />
+
+    <item
+        android:id="@+id/nav_download"
+        android:checked="false"
+        android:icon="@drawable/update_app"
+        android:title="Update App" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:checked="false"
+        android:icon="@mipmap/logout"
+        android:iconTint="@color/colorPrimary"
+        android:title="Logout" />
+    <item android:title="Version:1.0.8" />
+
+
+</menu>
+
+

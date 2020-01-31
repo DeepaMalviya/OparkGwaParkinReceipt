@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:elevation="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="@dimen/_1sdp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center_horizontal">
+
+
+            <TextView
+                android:id="@+id/textViewVehicleName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="Parking Name :"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/vehicleNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:text="VehicleNo :"
+                android:textColor="#FF000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/_5sdp"
+                android:text="Print"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/checkdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicleNo"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="Check In Date"
+                android:textColor="#FF000000"
+
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicleType"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="Mobile Number :"
+                android:textColor="#FF000000" />
+
+            <TextView
+                android:id="@+id/vehicleType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkdate"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="VehicleType"
+                android:textColor="#FF000000" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobileNumber">
+
+                <TextView
+                    android:id="@+id/chkOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:text="Check Out :"
+                    android:textColor="#FF000000"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

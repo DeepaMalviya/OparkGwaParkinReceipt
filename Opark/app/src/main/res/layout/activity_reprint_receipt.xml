@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="attender.oparkCard.attender.oparkReceipt.subscription.activity.ReprintReceipt">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutnfcnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditnfcnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:singleLine="true"
+            android:focusable="false"
+            android:hint="Enter NFS Card Number"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/cardview_dark_background" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/appCompatButtonRrprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_below="@+id/textInputLayoutnfcnumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Print Receipt"
+        android:textColor="@color/text_color_white"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

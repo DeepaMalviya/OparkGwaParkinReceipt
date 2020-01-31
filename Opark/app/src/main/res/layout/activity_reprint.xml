@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="attender.oparkCard.attender.oparkReceipt.booking.ReprintActivity">
+    <include layout="@layout/toolbar" />
+    <LinearLayout
+        android:id="@+id/linearTypeSelect"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/radioGroupType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/TwoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2W"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <RadioButton
+                android:id="@+id/ThreeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/d_5dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/d_5dp"
+                android:text="3W"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp" />
+
+            <RadioButton
+                android:id="@+id/FourType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/d_5dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/d_5dp"
+                android:text="4W"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/OtherType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/d_5dp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/d_5dp"
+                android:text="Other"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/normalUserVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/etStateCodee"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_73sdp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:capitalize="characters"
+            android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+            android:gravity="center"
+            android:hint="MP"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_19sdp" />
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_background" />
+
+        <EditText
+            android:id="@+id/etCityCodee"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_73sdp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:capitalize="characters"
+            android:gravity="center"
+            android:hint="07"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_19sdp" />
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_background" />
+
+        <EditText
+            android:id="@+id/etVehicleCodee"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_73sdp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:capitalize="characters"
+            android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+            android:gravity="center"
+            android:hint="MQ"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_19sdp" />
+
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_background" />
+
+        <EditText
+            android:id="@+id/etVehicleNumbere"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_73sdp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:capitalize="characters"
+            android:gravity="center"
+            android:hint="@string/enter_vehicle_no"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_19sdp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/d_10dp"
+
+        android:background="@drawable/buttongradient_gray"
+        android:text="Submit"
+        android:textColor="@color/cardview_dark_background"
+        android:textStyle="bold"
+        android:theme="@style/CheckBoxTheme" />
+
+</LinearLayout>

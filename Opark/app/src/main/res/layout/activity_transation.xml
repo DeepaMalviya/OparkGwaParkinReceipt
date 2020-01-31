@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="attender.oparkCard.attender.oparkReceipt.TransationActivity">
+
+    <include layout="@layout/toolbar" />
+
+
+    <LinearLayout
+        android:layout_below="@+id/toolBar"
+        android:id="@+id/normalUserVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <EditText
+            android:id="@+id/etStateCode"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d_70dp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:capitalize="characters"
+            android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+            android:gravity="center"
+            android:hint="MP"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_background" />
+
+        <EditText
+            android:id="@+id/etCityCode"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d_70dp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:capitalize="characters"
+            android:gravity="center"
+            android:hint="07"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_background" />
+
+        <EditText
+            android:id="@+id/etVehicleCode"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d_70dp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:capitalize="characters"
+            android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+            android:gravity="center"
+            android:hint="MQ"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+
+
+        <View
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/color_background" />
+
+        <EditText
+            android:id="@+id/etVehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/d_70dp"
+            android:layout_marginTop="@dimen/d_10dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:capitalize="characters"
+            android:gravity="center"
+            android:hint="@string/enter_vehicle_no"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/etMobileNo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_70dp"
+        android:layout_below="@+id/normalUserVehicle"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@android:color/white"
+        android:digits="QWERTZUIOPASDFGHJKLYXCVBNMqwertzuiopasdfghjklyxcvbnm1234567890"
+        android:gravity="center"
+        android:hint="Enter Transaction Id"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:padding="@dimen/d_5dp"
+        android:singleLine="true"
+        android:textSize="@dimen/_19sdp" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etMobileNo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/_5sdp"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_19sdp"
+        android:textStyle="bold" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_subscription">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_background"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textInpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:hint="Vehicle Detail"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="@dimen/_16sdp" />
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/twowheelerRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/bike"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    android:src="@mipmap/twobike" />
+
+
+                <RadioButton
+                    android:id="@+id/threewheelerRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/d_5dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/d_5dp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/threecar"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:src="@drawable/tuk_tuk" />
+
+                <RadioButton
+                    android:id="@+id/fourwheelerRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/d_5dp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/d_5dp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:textColor="@color/colorPrimary" />
+
+                <ImageView
+                    android:id="@+id/car"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:src="@mipmap/police_car512" />
+
+
+            </RadioGroup>
+
+
+            <!--<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="NFC Card Number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/nfcnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:hint="NFC Card Number"
+                android:inputType="numberPassword"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/_16sdp" />
+-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutnfcnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditnfcnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:hint="Enter NFS Card Number"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:focusable="false"
+                    android:textColor="@color/cardview_dark_background" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:hint="Enter Card Number"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/cardview_dark_background" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_margin="@dimen/_7sdp"
+                android:background="@color/cardview_dark_background" />
+-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayout1Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:hint="@string/hint_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/cardview_dark_background" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <EditText
+                    android:id="@+id/textInputEditStateCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:capitalize="characters"
+                    android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+                    android:hint="MP"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:padding="@dimen/d_5dp"
+                    android:textSize="@dimen/_16sdp" />
+
+
+                <EditText
+                    android:id="@+id/textInputTextCityCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:capitalize="characters"
+                    android:hint="07"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:padding="@dimen/d_5dp"
+                    android:textSize="@dimen/_16sdp" />
+
+
+                <EditText
+                    android:id="@+id/textInputEditVehicleCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:capitalize="characters"
+                    android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+                    android:hint="MQ"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="2"
+                    android:maxLines="1"
+                    android:padding="@dimen/d_5dp"
+                    android:textSize="@dimen/_16sdp" />
+
+
+                <EditText
+                    android:id="@+id/textInputEditTextvehicleNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:capitalize="characters"
+                    android:hint="Enter Vehicle No."
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:padding="@dimen/d_5dp"
+                    android:textSize="@dimen/_16sdp" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditTextMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_mobile"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="@color/cardview_dark_background" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputLayoutAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/textInputEditAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:hint="Enter Address"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/cardview_dark_background" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinnerplan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+
+                />
+
+            <Spinner
+                android:id="@+id/spinnerDuration"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/linearPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Price :"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/TvPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="start"
+                    android:inputType="number"
+                    android:padding="@dimen/_10sdp"
+                    android:text=" "
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:background="@color/cardview_dark_background" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/appCompatButtonRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorPrimary"
+                    android:text="Add"
+                    android:textColor="@color/text_color_white"
+                    android:textStyle="bold" />
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/appCompatButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/appCompatButtonRegister"
+                    android:background="@color/colorPrimary"
+                    android:text="New Card"
+                    android:textColor="@color/text_color_white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+
+    <!--
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:orientation="horizontal">
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutName"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_7sdp">
+
+        <EditText
+            android:id="@+id/textInputEditStateCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:capitalize="characters"
+            android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+            android:hint="MP"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_7sdp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputTextCityCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:capitalize="characters"
+            android:hint="07"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_7sdp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditVehicleCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:capitalize="characters"
+            android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+            android:hint="MQ"
+            android:imeOptions="actionNext"
+            android:inputType="textCapCharacters"
+            android:maxLength="2"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_7sdp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textInputEditTextvehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:capitalize="characters"
+            android:hint="@string/enter_vehicle_no"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="4"
+            android:maxLines="1"
+            android:padding="@dimen/d_5dp"
+            android:textSize="@dimen/_16sdp" />
+    </android.support.design.widget.TextInputLayout>
+    </LinearLayout>-->

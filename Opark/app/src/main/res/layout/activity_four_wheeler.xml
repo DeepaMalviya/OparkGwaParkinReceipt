@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
+
+    <include layout="@layout/toolbar" />
+
+    <!-- <include
+         layout="@layout/toolbar_with_imageview"
+         android:layout_marginRight="@dimen/_10sdp"
+         tools:ignore="IncludeLayoutParam" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:background="@color/color_background"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/attenderNamee"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:hint="AAAAAAA"
+            android:textColor="@color/text_color_light_black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/parking_Namee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:hint="AAAAAAA"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_20sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Available slots"
+                        android:textColor="@color/text_color_light_black"
+                        android:textSize="@dimen/_15sdp" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Booked slots"
+                        android:textColor="@color/text_color_light_black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_3dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvAvailableSpotss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/text_color_light_black"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <TextView
+                        android:id="@+id/tvTotalSpotss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textColor="@color/text_color_light_black"
+                        android:textSize="@dimen/_15sdp" />
+
+
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d_5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/normalUserr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="Normal User"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+
+                    <RadioButton
+                        android:id="@+id/vipUserr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d_5dp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/d_5dp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="VIP User"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <RadioButton
+                        android:id="@+id/onlineUserr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d_5dp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/d_5dp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="Online User"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_14sdp"
+                        android:visibility="gone" />
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:id="@+id/normalUserVehiclee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <EditText
+                        android:id="@+id/etStateCodee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_70dp"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:capitalize="characters"
+                        android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+                        android:gravity="center"
+                        android:hint="MP"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="@dimen/d_5dp"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/color_background" />
+
+                    <EditText
+                        android:id="@+id/etCityCodee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_70dp"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:capitalize="characters"
+                        android:gravity="center"
+                        android:hint="07"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="@dimen/d_5dp"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/color_background" />
+
+                    <EditText
+                        android:id="@+id/etVehicleCodee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_70dp"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:capitalize="characters"
+                        android:digits="QWERTZUIOPASDFGHJKLYXCVBNM"
+                        android:gravity="center"
+                        android:hint="MQ"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="2"
+                        android:maxLines="1"
+                        android:padding="@dimen/d_5dp"
+                        android:textSize="@dimen/_16sdp" />
+
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@color/color_background" />
+
+                    <EditText
+                        android:id="@+id/etVehicleNumberr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/d_70dp"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:capitalize="characters"
+                        android:gravity="center"
+                        android:hint="@string/enter_vehicle_no"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:padding="@dimen/d_5dp"
+                        android:textSize="@dimen/_16sdp" />
+
+
+                </LinearLayout>
+
+                <requestFocus />
+
+                <LinearLayout
+                    android:id="@+id/vipUserVehiclee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/vipVehicleNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_73sdp"
+                        android:layout_marginTop="@dimen/d_20dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:digits="QWERTZUIOPASDFGHJKLYXCVBNMqwertzuopasdfghjklxcvbnm1234567890"
+                        android:gravity="center"
+                        android:hint="@string/enter_vehicle_no"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:padding="@dimen/d_5dp"
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/otp_VehicleNumberr"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_73sdp"
+                        android:layout_marginTop="@dimen/d_20dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/darker_gray"
+                        android:gravity="center"
+                        android:hint="@string/enter_vehicle_no"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:padding="@dimen/d_5dp"
+                        android:textSize="@dimen/_16sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etMobileNoo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_70dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="center"
+                    android:hint="@string/enter_mobile_no"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/d_5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/_16sdp" />
+
+                <EditText
+                    android:id="@+id/etvipInfoo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_70dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:hint="VIP Info"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:padding="@dimen/d_5dp"
+                    android:singleLine="true"
+
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_weight="2">
+
+                        <Button
+                            android:id="@+id/btnCheckInn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/d_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/buttongradient_gray"
+                            android:text="Check-In"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold"
+                            android:theme="@style/CheckBoxTheme" />
+
+                        <Button
+                            android:id="@+id/btnCheckoutt"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_marginTop="@dimen/d_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/buttongradient_gray"
+                            android:text="Check-Out"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold"
+                            android:theme="@style/CheckBoxTheme" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_weight="1.3"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnScanQRCodee"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/d_10dp"
+                            android:background="@drawable/sacngradient"
+                            android:text="@string/scan_qr_code"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold"
+                            android:theme="@style/CheckBoxTheme"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btnScanQRCodeCheckInnn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/d_10dp"
+                            android:background="@drawable/sacngradient"
+                            android:text="@string/scan_qr_codechekIn"
+                            android:textColor="@color/cardview_dark_background"
+                            android:textStyle="bold"
+                            android:theme="@style/CheckBoxTheme"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                    <!--
+                                        <Button
+                                            android:id="@+id/btnCheckIn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_80sdp"
+                                            android:layout_marginRight="@dimen/_3sdp"
+                                            android:layout_marginTop="@dimen/d_10dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/buttongradient"
+                                            android:text="Check-In" />
+                                        <Button
+                                            android:id="@+id/btnCheckout"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_80sdp"
+                                            android:layout_marginRight="@dimen/_3sdp"
+                                            android:layout_marginTop="@dimen/d_10dp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/gradientback"
+                                            android:text="Check-Out" />
+                                        <Button
+                                            android:id="@+id/btnScanQRCode"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_80sdp"
+                                            android:layout_marginRight="@dimen/_3sdp"
+                                            android:layout_marginTop="@dimen/d_10dp"
+                                            android:layout_weight="1"
+                                            android:padding="@dimen/_5sdp"
+                                            android:background="@drawable/sacngradient"
+                                            android:text="@string/scan_qr_code" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnScanQRCodeCheckInn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/sacngradient"
+                        android:padding="@dimen/_7sdp"
+                        android:text="@string/scan_qr_codechekIn"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnRecentPrintInn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_3dp"
+                        android:layout_marginRight="@dimen/d_3dp"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:text="Recent-Check-In-Receipt"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btnRecentPrintoutt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d_10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:text="Recent-Check-Out-Receipt"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

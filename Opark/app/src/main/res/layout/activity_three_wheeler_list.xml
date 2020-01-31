@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="attender.oparkCard.attender.oparkReceipt.vehiclelist.activity.ThreeWheelerList"
+        tools:showIn="@layout/activity_three_wheeler_list"
+        android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ActionBarThemeDark"
+        android:titleTextAppearance="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:text="jhbcaskhcvcjh"
+            />
+    </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayoutt"
+            android:layout_below="@+id/toolBar"
+            style="@style/MyCustomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@android:color/holo_blue_light"
+            app:tabIndicatorColor="@color/red"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/white" />
+>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabLayout"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>

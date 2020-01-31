@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="attender.oparkCard.attender.oparkReceipt.subscription.activity.ShowCardDetail"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/renew_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolBar"
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_toRightOf="@+id/add_card"
+        android:layout_weight="1"
+        android:elevation="10dp"
+        card_view:cardCornerRadius="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/holderName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_light_black"/>
+
+            <TextView
+                android:id="@+id/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/holderName"
+                android:text="Pass" />
+
+            <TextView
+
+                android:id="@+id/cardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pass"
+                android:text="Card Number" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/pass_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardNumber"
+                android:text="Card Number" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/renew_card">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
